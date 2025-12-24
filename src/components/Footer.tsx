@@ -77,11 +77,21 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="text-secondary flex-shrink-0" size={18} />
-                <a href="tel:+2347030266090" className="text-gray-300 hover:text-white">+234 703 026 6090</a>
+                <div>
+                  <p className="text-xs text-gray-400 mb-1">Main Line</p>
+                  <a href="tel:+2347036435989" className="text-gray-300 hover:text-white">+234 703 643 5989</a>
+                </div>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Phone className="text-secondary flex-shrink-0" size={18} />
+                <div>
+                  <p className="text-xs text-gray-400 mb-1">Call Line</p>
+                  <a href="tel:07039357146" className="text-gray-300 hover:text-white">07039357146</a>
+                </div>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="text-secondary flex-shrink-0" size={18} />
-                <a href="mailto:info@royaljacksontravels.com" className="text-gray-300 hover:text-white">info@royaljacksontravels.com</a>
+                <a href="mailto:Royaljacksontravelandtours@gmail.com" className="text-gray-300 hover:text-white">Royaljacksontravelandtours@gmail.com</a>
               </li>
             </ul>
           </div>

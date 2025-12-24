@@ -24,14 +24,14 @@ export default function Header() {
       {/* Top Bar */}
       <div className="bg-primary text-white py-2 px-4 text-sm hidden md:block">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex space-x-4">
+          <div className="flex space-x-6">
             <div className="flex items-center space-x-1">
               <Phone size={14} className="text-secondary" />
-              <span>+234 703 026 6090</span>
+              <span>+234 703 643 5989</span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail size={14} className="text-secondary" />
-              <span>info@royaljacksontravels.com</span>
+              <span>Royaljacksontravelandtours@gmail.com</span>
             </div>
           </div>
           <div className="flex space-x-4">

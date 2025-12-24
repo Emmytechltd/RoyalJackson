@@ -51,9 +51,13 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-bold text-gray-800">Phone</h3>
-                <p className="text-gray-600 mb-1">Call us for immediate assistance</p>
-                <a href="tel:+2347030266090" className="text-primary font-bold text-lg hover:underline">
-                  +234 703 026 6090
+                <p className="text-gray-600 mb-2">Main Line</p>
+                <a href="tel:+2347036435989" className="text-primary font-bold text-lg hover:underline block mb-3">
+                  +234 703 643 5989
+                </a>
+                <p className="text-gray-600 mb-2">Call Line</p>
+                <a href="tel:07039357146" className="text-primary font-bold text-lg hover:underline">
+                  07039357146
                 </a>
               </div>
             </div>
@@ -65,8 +69,8 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold text-gray-800">Email</h3>
                 <p className="text-gray-600 mb-1">Send us your inquiries anytime</p>
-                <a href="mailto:info@royaljacksontravels.com" className="text-primary font-bold text-lg hover:underline">
-                  info@royaljacksontravels.com
+                <a href="mailto:Royaljacksontravelandtours@gmail.com" className="text-primary font-bold text-lg hover:underline">
+                  Royaljacksontravelandtours@gmail.com
                 </a>
               </div>
             </div>
@@ -86,7 +90,7 @@ export default function ContactPage() {
 
             <div className="pt-6">
               <a 
-                href="https://wa.me/2347030266090" 
+                href="https://wa.me/2347036435989" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center w-full sm:w-auto bg-green-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-700 transition-colors shadow-lg"
