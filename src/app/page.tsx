@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight, Globe, BookOpen, Briefcase, Plane } from "lucide-react";
 import { motion } from "framer-motion";
+import ValentineDeal from "@/components/ValentineDeal";
 
 export default function Home() {
   return (
@@ -49,6 +50,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Valentine Deal Section */}
+      <ValentineDeal />
 
       {/* Services Overview */}
       <section className="container mx-auto px-4">
