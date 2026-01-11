@@ -139,7 +139,7 @@ export default function ValentineDeal() {
                     <h4 className="font-bold text-primary text-lg">Shared Accommodation</h4>
                   </div>
                   <p className="text-gray-600 text-sm mb-4">Per Person (2 Sharing)</p>
-                  <p className="text-4xl font-bold text-primary">₦2,950,000</p>
+                  <p className="text-4xl font-bold text-primary">₦2,550,000</p>
                 </motion.div>
 
                 {/* Single Room */}
@@ -158,7 +158,7 @@ export default function ValentineDeal() {
                     <h4 className="font-bold text-red-600 text-lg">Single Room</h4>
                   </div>
                   <p className="text-gray-600 text-sm mb-4">Private Luxury Experience</p>
-                  <p className="text-4xl font-bold text-red-600">₦3,650,000</p>
+                  <p className="text-4xl font-bold text-red-600">₦3,250,000</p>
                 </motion.div>
               </div>
 
