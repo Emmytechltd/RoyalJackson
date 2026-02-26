@@ -4,10 +4,12 @@ import Link from "next/link";
 import { ArrowRight, Globe, BookOpen, Briefcase, Plane } from "lucide-react";
 import { motion } from "framer-motion";
 import ValentineDeal from "@/components/ValentineDeal";
+import EVisaAlert from "@/components/EVisaAlert";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 pb-16">
+      <EVisaAlert />
       {/* Hero Section */}
       <section className="relative bg-primary text-white py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-20"></div>

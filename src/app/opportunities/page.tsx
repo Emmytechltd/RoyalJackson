@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { MapPin, Calendar, CheckCircle } from "lucide-react";
+import EVisaAlert from "@/components/EVisaAlert";
 
 export default function OpportunitiesPage() {
   const opportunities = [
@@ -63,6 +64,7 @@ export default function OpportunitiesPage() {
 
   return (
     <div className="pb-16">
+      <EVisaAlert />
       {/* Header */}
       <div className="bg-primary text-white py-16 text-center">
         <h1 className="text-4xl font-bold mb-4">Travel Opportunities</h1>

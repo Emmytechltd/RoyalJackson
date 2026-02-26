@@ -76,6 +76,24 @@ export default function BlogPage() {
       author: "Travel Expert",
       category: "Destinations",
       image: "https://images.unsplash.com/photo-1512453979798-5ea904acfb5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+    },
+    {
+      id: 7,
+      title: "New E-Visa Updates for 2026",
+      excerpt: "Get the latest updates on our expanded e-visa list, including new countries and streamlined application processes for our clients.",
+      date: "February 25, 2026",
+      author: "Visa Team",
+      category: "Visa Update",
+      image: "/images/new1.jpeg"
+    },
+    {
+      id: 8,
+      title: "Special Travel Packages Now Available",
+      excerpt: "Explore our newly launched travel packages designed to give you the best value and experience for your next international trip.",
+      date: "February 25, 2026",
+      author: "Travel Advisor",
+      category: "Special Offer",
+      image: "/images/new2.jpeg"
     }
   ];
 
