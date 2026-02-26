@@ -59,11 +59,21 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4 border-b border-secondary pb-2 inline-block">Our Services</h4>
             <ul className="space-y-2">
-              <li className="text-gray-300">Visa Assistance</li>
-              <li className="text-gray-300">Study Abroad Programs</li>
-              <li className="text-gray-300">Work & Relocation</li>
-              <li className="text-gray-300">Flight & Hotel Booking</li>
-              <li className="text-gray-300">Travel Consultation</li>
+              <li>
+                <Link href="/services" className="text-gray-300 hover:text-secondary transition-colors">Visa Assistance</Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-300 hover:text-secondary transition-colors">Study Abroad Programs</Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-300 hover:text-secondary transition-colors">Work & Relocation</Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-300 hover:text-secondary transition-colors">Flight & Hotel Booking</Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-gray-300 hover:text-secondary transition-colors">Travel Consultation</Link>
+              </li>
             </ul>
           </div>
 

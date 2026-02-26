@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, Facebook, Instagram, Twitter } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,11 @@ export default function Header() {
             </div>
           </div>
           <div className="flex space-x-4">
-            {/* Social Icons could go here */}
+            <div className="flex items-center space-x-3 mr-4 border-r border-white/20 pr-4">
+              <Link href="#" className="hover:text-secondary transition-colors"><Facebook size={16} /></Link>
+              <Link href="#" className="hover:text-secondary transition-colors"><Instagram size={16} /></Link>
+              <Link href="#" className="hover:text-secondary transition-colors"><Twitter size={16} /></Link>
+            </div>
             <span>Abuja, Nigeria</span>
           </div>
         </div>
@@ -79,24 +84,31 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute w-full left-0">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary ${
-                  pathname === item.href ? "text-primary bg-gray-50" : "text-gray-700"
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white shadow-lg absolute w-full left-0 overflow-hidden"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 hover:text-primary ${
+                    pathname === item.href ? "text-primary bg-gray-50" : "text-gray-700"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
