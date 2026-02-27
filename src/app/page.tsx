@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { ArrowRight, Globe, BookOpen, Briefcase, Plane } from "lucide-react";
 import { motion } from "framer-motion";
-import ValentineDeal from "@/components/ValentineDeal";
 import EVisaAlert from "@/components/EVisaAlert";
 
 export default function Home() {
@@ -52,9 +51,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Valentine Deal Section */}
-      <ValentineDeal />
 
       {/* Services Overview */}
       <section className="container mx-auto px-4">
