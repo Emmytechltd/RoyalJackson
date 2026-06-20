@@ -66,10 +66,13 @@ export default function EVisaAlert() {
 
             {/* Content */}
             <div className="p-8">
-              <p className="text-gray-700 font-medium mb-6">
-                Kindly find below, our updated E-visa list 
+              <p className="text-gray-700 font-medium mb-4">
+                Kindly find below our updated E-visa list and available countries:
               </p>
-              
+              <p className="text-gray-700 mb-6">
+                Available countries: Italy, Mexico, Bulgaria, Guyana, Peru.
+              </p>
+
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {visaList.map((visa, index) => (
                   <li key={index} className="flex items-center gap-2 text-gray-700 text-sm">
