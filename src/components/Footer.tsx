@@ -108,21 +108,17 @@ export default function Footer() {
                   <a href="mailto:Royaljacksontravelandtours@gmail.com" className="text-gray-100 hover:text-secondary transition-colors">Royaljacksontravelandtours@gmail.com</a>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <Phone className="text-secondary flex-shrink-0" size={20} />
-                <div>
-                  <p className="text-xs text-gray-400 mb-1 uppercase tracking-[0.2em]">WhatsApp</p>
-                  <a href="https://wa.me/2347067797360" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-2 text-gray-100 hover:bg-secondary hover:text-white transition-colors shadow-sm">
-                    +2347067797360
-                  </a>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-400 text-sm sm:text-base">
-          <p>&copy; {new Date().getFullYear()} Emmytech Digital Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {' '}
+            <a href="https://emmytech.netlify.app/" target="_blank" rel="noreferrer" className="text-gray-200 hover:text-secondary transition-colors">
+              Emmytech Digital Solutions
+            </a>
+            . All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
