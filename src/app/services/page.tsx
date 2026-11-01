@@ -1,107 +1,157 @@
-"use client";
-
 import Link from "next/link";
-import { Globe, BookOpen, Briefcase, Plane, FileText, Users } from "lucide-react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import {
+  ArrowUpRight,
+  BookOpen,
+  BriefcaseBusiness,
+  Compass,
+  FileCheck2,
+  Plane,
+  UsersRound,
+} from "lucide-react";
+import PageIntro from "@/components/PageIntro";
+
+export const metadata: Metadata = {
+  title: "Travel Services",
+  description: "Visa assistance, study abroad guidance, work and relocation, flights, hotels and tour planning.",
+};
+
+const services = [
+  {
+    id: "visa-assistance",
+    number: "01",
+    title: "Visa Assistance",
+    description:
+      "Understand the application process with careful support tailored to your destination and travel purpose.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=85",
+    icon: FileCheck2,
+    features: ["Tourist, study, work and business visas", "Documentation support", "Application guidance"],
+  },
+  {
+    id: "study-abroad",
+    number: "02",
+    title: "Study Abroad",
+    description:
+      "Explore international education options and get guidance through university selection and application steps.",
+    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=85",
+    icon: BookOpen,
+    features: ["International university selection", "Admission processing", "Scholarship and student visa guidance"],
+  },
+  {
+    id: "work-relocation",
+    number: "03",
+    title: "Work & Relocation",
+    description:
+      "Plan an overseas move with support for work permit enquiries, residency guidance and pre-departure preparation.",
+    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
+    icon: BriefcaseBusiness,
+    features: ["Overseas employment guidance", "Work permit assistance", "Relocation and pre-departure support"],
+  },
+  {
+    id: "flight-hotel",
+    number: "04",
+    title: "Flight & Hotel Booking",
+    description:
+      "Make the travel details easier with support for air travel, accommodation and related trip arrangements.",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85",
+    icon: Plane,
+    features: ["International and domestic flights", "Hotel reservations", "Travel insurance and airport transfers"],
+  },
+  {
+    id: "travel-consultation",
+    number: "05",
+    title: "Travel Consultation",
+    description:
+      "Talk through your plans with a travel consultant and get help understanding requirements and options.",
+    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=85",
+    icon: Compass,
+    features: ["Personalised travel advice", "Itinerary planning", "Travel requirements and budget planning"],
+  },
+  {
+    id: "tour-packages",
+    number: "06",
+    title: "Tour Packages",
+    description:
+      "Plan a shared adventure, a family escape or a special occasion with a holiday experience shaped around you.",
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=85",
+    icon: UsersRound,
+    features: ["Family holidays", "Honeymoon and group tours", "Adventure and cultural experiences"],
+  },
+];
 
 export default function ServicesPage() {
-  const services = [
-    {
-      icon: <FileText className="w-12 h-12 text-secondary" />,
-      title: "Visa Assistance",
-      description: "We provide comprehensive visa assistance for various countries including USA, Canada, UK, Australia, and Schengen countries. Whether it's for tourism, study, work, or business, we guide you through the documentation and application process.",
-      features: ["Document review", "Application form filling", "Interview preparation", "Appointment scheduling"]
-    },
-    {
-      icon: <BookOpen className="w-12 h-12 text-secondary" />,
-      title: "Study Abroad Programs",
-      description: "Unlock your potential with our study abroad programs. We help students secure admissions into top universities across the globe and assist with student visa applications.",
-      features: ["University selection", "Admission processing", "Scholarship guidance", "Student visa support"]
-    },
-    {
-      icon: <Briefcase className="w-12 h-12 text-secondary" />,
-      title: "Work & Relocation",
-      description: "Looking to work overseas? We connect skilled professionals with job opportunities abroad and assist with work permits and permanent residency applications.",
-      features: ["Job search assistance", "Work permit application", "Residency programs", "Pre-departure orientation"]
-    },
-    {
-      icon: <Plane className="w-12 h-12 text-secondary" />,
-      title: "Flight & Hotel Booking",
-      description: "Get the best deals on flight tickets and hotel accommodations. We ensure you have a comfortable journey and stay, tailored to your budget.",
-      features: ["International & domestic flights", "Hotel reservations", "Travel insurance", "Airport transfers"]
-    },
-    {
-      icon: <Users className="w-12 h-12 text-secondary" />,
-      title: "Travel Consultation",
-      description: "Not sure where to start? Our expert consultants provide personalized travel advice to help you plan your trip effectively and avoid common pitfalls.",
-      features: ["Itinerary planning", "Budget estimation", "Travel requirements check", "Customized travel packages"]
-    },
-    {
-      icon: <Globe className="w-12 h-12 text-secondary" />,
-      title: "Tour Packages",
-      description: "Explore the world with our curated tour packages. Whether you're looking for a romantic getaway, a family vacation, or an adventure trip, we have something for everyone.",
-      features: ["Group tours", "Honeymoon packages", "Adventure travel", "Cultural experiences"]
-    }
-  ];
-
   return (
-    <div className="pb-16">
-      {/* Header */}
-      <div className="bg-primary text-white py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">Our Services</h1>
-        <p className="text-xl max-w-2xl mx-auto px-4">
-          Comprehensive travel solutions designed to make your journey smooth and hassle-free.
-        </p>
-      </div>
-
-      <div className="container mx-auto px-4 mt-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow flex flex-col h-full">
-              <div className="mb-6">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-primary mb-4">{service.title}</h3>
-              <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
-              <div className="mt-auto">
-                <h4 className="font-bold text-gray-800 mb-3">Key Features:</h4>
-                <ul className="list-disc list-inside text-gray-600 space-y-1 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
-                  ))}
-                </ul>
-                <Link 
-                  href="/contact" 
-                  className="block w-full text-center bg-primary text-white font-bold py-3 rounded-lg hover:bg-blue-900 transition-colors"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          ))}
+    <>
+      <PageIntro
+        eyebrow="Travel, made personal"
+        title="Travel support for every kind of journey."
+        description="Explore considered guidance for your travel plans, from visa and study applications to flights, stays and holidays."
+      />
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mb-10 max-w-2xl">
+          <p className="section-kicker">Our services</p>
+          <h2 className="editorial mt-3 text-4xl text-primary sm:text-5xl">The details, taken care of.</h2>
         </div>
-        
-        {/* CTA Section */}
-        <div className="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-bold text-primary mb-4">Need a Custom Solution?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            We understand that every traveler is unique. Contact us today to discuss your specific requirements and let us tailor a package just for you.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
-              href="/contact" 
-              className="bg-secondary text-primary font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition-colors text-lg"
-            >
-              Contact Us
-            </Link>
-            <a 
-              href="https://wa.me/2347030266090" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-500 transition-colors text-lg"
-            >
-              WhatsApp Us
-            </a>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <article
+                key={service.id}
+                id={service.id}
+                className="group scroll-mt-28 border border-slate-200 bg-white transition-shadow hover:shadow-[0_16px_40px_rgba(16,28,50,0.10)]"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <span className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center bg-white text-primary">
+                    <Icon size={20} aria-hidden="true" />
+                  </span>
+                  <span className="absolute right-5 top-5 text-xs font-semibold tracking-[0.15em] text-white">
+                    {service.number}
+                  </span>
+                </div>
+                <div className="p-6 sm:p-7">
+                  <h2 className="editorial text-2xl text-primary">{service.title}</h2>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{service.description}</p>
+                  <ul className="mt-5 space-y-2.5">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2 text-xs leading-5 text-slate-600">
+                        <span className="mt-1 h-1.5 w-1.5 shrink-0 bg-[#c6a66b]" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/contact#enquiry"
+                    className="mt-6 inline-flex items-center gap-2 border-t border-slate-100 pt-4 text-xs font-semibold text-primary hover:text-[#8d7448]"
+                  >
+                    Discuss your plans <ArrowUpRight size={15} />
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+      <section className="bg-[#f0f1f3]">
+        <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-14 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+          <div className="max-w-2xl">
+            <p className="section-kicker">A journey that feels like yours</p>
+            <h2 className="editorial mt-2 text-3xl text-primary sm:text-4xl">Not sure what you need yet?</h2>
+            <p className="mt-3 text-sm leading-6 text-slate-600">Tell us a little about your plans and we can help you find a starting point.</p>
           </div>
+          <Link href="/contact#enquiry" className="focus-ring inline-flex min-h-12 shrink-0 items-center justify-center gap-2 bg-primary px-6 text-sm font-semibold text-white hover:bg-[#253c60]">
+            Talk to our team <ArrowUpRight size={16} />
+          </Link>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

@@ -1,124 +1,121 @@
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+
+const services = [
+  { title: "Visa assistance", id: "visa-assistance" },
+  { title: "Study abroad", id: "study-abroad" },
+  { title: "Work & relocation", id: "work-relocation" },
+  { title: "Flight & hotel booking", id: "flight-hotel" },
+  { title: "Travel consultation", id: "travel-consultation" },
+  { title: "Tour packages", id: "tour-packages" },
+];
+
+const destinations = [
+  "Canada",
+  "United Kingdom",
+  "Australia",
+  "United States",
+  "France",
+  "Dubai",
+  "South Africa",
+  "Singapore",
+];
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-primary via-slate-900 to-slate-950 text-white pt-16 pb-10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Company Info */}
-          <div className="space-y-5">
-            <div>
-              <h3 className="text-3xl font-bold tracking-tight mb-3">
-                Emmytech <span className="text-secondary">Digital Solutions</span>
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                Building standout digital experiences with modern travel, visa, and support services.
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              <Link href="#" className="text-gray-300 hover:text-secondary transition-colors rounded-full p-2 bg-white/5 shadow-sm">
-                <Facebook size={20} />
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-secondary transition-colors rounded-full p-2 bg-white/5 shadow-sm">
-                <Twitter size={20} />
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-secondary transition-colors rounded-full p-2 bg-white/5 shadow-sm">
-                <Instagram size={20} />
-              </Link>
-              <Link href="#" className="text-gray-300 hover:text-secondary transition-colors rounded-full p-2 bg-white/5 shadow-sm">
-                <Linkedin size={20} />
-              </Link>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div className="space-y-5">
-            <h4 className="text-xl font-semibold mb-4 border-b border-secondary pb-2 inline-block">Quick Links</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Our Services</Link>
-              </li>
-              <li>
-                <Link href="/opportunities" className="text-gray-300 hover:text-white transition-colors">Travel Opportunities</Link>
-              </li>
-              <li>
-                <Link href="/destinations" className="text-gray-300 hover:text-white transition-colors">Destinations</Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="space-y-5">
-            <h4 className="text-xl font-semibold mb-4 border-b border-secondary pb-2 inline-block">Our Services</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Visa Assistance</Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Study Abroad Programs</Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Work & Relocation</Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Flight & Hotel Booking</Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors">Travel Consultation</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-5 bg-white/5 rounded-3xl p-6 border border-white/10 shadow-xl">
-            <h4 className="text-xl font-semibold mb-4 border-b border-secondary pb-2 inline-block">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="text-secondary mt-1 flex-shrink-0" size={20} />
-                <span className="text-gray-200">Abuja, Nigeria</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="text-secondary flex-shrink-0" size={20} />
-                <div>
-                  <p className="text-xs text-gray-400 mb-1 uppercase tracking-[0.2em]">Main Line</p>
-                  <a href="tel:+2347036435989" className="text-gray-100 hover:text-secondary transition-colors">+234 703 643 5989</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="text-secondary flex-shrink-0" size={20} />
-                <div>
-                  <p className="text-xs text-gray-400 mb-1 uppercase tracking-[0.2em]">Call Line</p>
-                  <a href="tel:07039357146" className="text-gray-100 hover:text-secondary transition-colors">07039357146</a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="text-secondary flex-shrink-0" size={20} />
-                <div>
-                  <p className="text-xs text-gray-400 mb-1 uppercase tracking-[0.2em]">Email</p>
-                  <a href="mailto:Royaljacksontravelandtours@gmail.com" className="text-gray-100 hover:text-secondary transition-colors">Royaljacksontravelandtours@gmail.com</a>
-                </div>
-              </li>
-            </ul>
-          </div>
+    <footer className="bg-primary text-white">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:px-8">
+        <div>
+          <Link href="/" className="inline-flex items-center gap-3" aria-label="Royal Jackson home">
+            <span className="flex h-11 w-11 items-center justify-center border border-secondary text-lg">
+              RJ
+            </span>
+            <span>
+              <span className="block text-sm font-semibold tracking-[0.12em]">ROYAL JACKSON</span>
+              <span className="mt-1 block text-[9px] tracking-[0.23em] text-white/60">TRAVEL &amp; TOURS</span>
+            </span>
+          </Link>
+          <p className="mt-6 max-w-sm text-sm leading-7 text-white/65">
+            Thoughtful travel planning, visa assistance and study abroad guidance for the journeys
+            that matter to you.
+          </p>
         </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-400 text-sm sm:text-base">
-          <p>&copy; {new Date().getFullYear()} {' '}
-            <a href="https://emmytech.netlify.app/" target="_blank" rel="noreferrer" className="text-gray-200 hover:text-secondary transition-colors">
-              Emmytech Digital Solutions
-            </a>
-            . All rights reserved.
-          </p>
+        <div>
+          <h2 className="section-kicker mb-5 text-[#ddc89f]">Explore</h2>
+          <ul className="space-y-3 text-sm text-white/70">
+            <li><Link className="hover:text-secondary" href="/about">About us</Link></li>
+            <li><Link className="hover:text-secondary" href="/services">Our services</Link></li>
+            <li><Link className="hover:text-secondary" href="/destinations">Destinations</Link></li>
+            <li><Link className="hover:text-secondary" href="/opportunities">Study abroad</Link></li>
+            <li><Link className="hover:text-secondary" href="/blog">Travel insights</Link></li>
+            <li><Link className="hover:text-secondary" href="/contact">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="section-kicker mb-5 text-[#ddc89f]">Services &amp; places</h2>
+          <ul className="space-y-3 text-sm text-white/70">
+            {services.map((service) => (
+              <li key={service.id}>
+                <Link className="hover:text-secondary" href={`/services#${service.id}`}>
+                  {service.title}
+                </Link>
+              </li>
+            ))}
+            <li><Link className="hover:text-secondary" href="/destinations">View all destinations</Link></li>
+            {destinations.slice(0, 2).map((country) => (
+              <li key={country}>
+                <Link className="hover:text-secondary" href={`/destinations#${country.toLowerCase().replaceAll(" ", "-")}`}>
+                  {country}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="section-kicker mb-5 text-[#ddc89f]">Get in touch</h2>
+          <ul className="space-y-4 text-sm text-white/70">
+            <li className="flex items-start gap-3">
+              <MapPin size={17} className="mt-0.5 shrink-0 text-secondary" />
+              <span>Abuja, Nigeria</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Phone size={17} className="mt-0.5 shrink-0 text-secondary" />
+              <div className="space-y-2">
+                <a className="block hover:text-secondary" href="tel:+2347036435989">+234 703 643 5989</a>
+                <a className="block hover:text-secondary" href="tel:07039357146">07039357146</a>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <Mail size={17} className="mt-0.5 shrink-0 text-secondary" />
+              <a className="break-all hover:text-secondary" href="mailto:Royaljacksontravelandtours@gmail.com">
+                Royaljacksontravelandtours@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                className="inline-flex border border-white/25 px-4 py-2.5 text-xs font-semibold tracking-wide text-white transition-colors hover:border-secondary hover:text-secondary"
+                href="https://wa.me/2347036435989"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chat on WhatsApp
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-xs text-white/50 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+          <p>© {new Date().getFullYear()} Royal Jackson Travel &amp; Tours. All rights reserved.</p>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href="/privacy" className="hover:text-white">Privacy notice</Link>
+            <Link href="/terms" className="hover:text-white">Website terms</Link>
+            <span>Abuja, Nigeria</span>
+          </div>
         </div>
       </div>
     </footer>
