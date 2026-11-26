@@ -21,6 +21,7 @@ import {
   Plane,
   Sparkles,
 } from "lucide-react";
+import HomePromotionPopup from "@/components/HomePromotionPopup";
 import TravelEnquiryForm from "@/components/TravelEnquiryForm";
 
 const services = [
@@ -202,6 +203,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
+      <HomePromotionPopup />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
