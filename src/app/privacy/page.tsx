@@ -22,11 +22,14 @@ export default function PrivacyPage() {
         </p>
         <h2 className="editorial mt-9 text-2xl text-primary">Travel enquiry form</h2>
         <p className="mt-3 text-sm leading-7 text-slate-600">
-          When you fill in the travel enquiry form, your details are used in your browser to
-          prepare a message addressed to Royal Jackson on WhatsApp. The form does not submit your
-          details to a website booking system. WhatsApp opens separately, and you can review or
-          edit the message before choosing whether to send it. If you send it, WhatsApp and Royal
-          Jackson may then process the information under their own practices.
+          When you fill in the travel enquiry form, the name, email address, phone number,
+          destination, travel purpose, departure date, number of travellers and optional message
+          are used in your browser to prepare a WhatsApp message addressed to Royal Jackson. The
+          form does not submit your details to a website booking system or server. WhatsApp opens
+          separately, and you can review or edit the message before choosing whether to send it.
+          If you send it, WhatsApp and Royal Jackson may then process the information under their
+          own practices. Please do not include passport, banking or other sensitive documents in
+          the initial enquiry.
         </p>
         <h2 className="editorial mt-9 text-2xl text-primary">Phone, email and external links</h2>
         <p className="mt-3 text-sm leading-7 text-slate-600">

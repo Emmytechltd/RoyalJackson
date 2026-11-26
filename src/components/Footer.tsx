@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Plane } from "lucide-react";
 
 const services = [
   { title: "Visa assistance", id: "visa-assistance" },
@@ -27,15 +27,16 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:px-8">
         <div>
           <Link href="/" className="inline-flex items-center gap-3" aria-label="Royal Jackson home">
-            <span className="flex h-11 w-11 items-center justify-center border border-secondary text-lg">
-              RJ
+            <span className="flex h-11 w-11 items-center justify-center border border-secondary text-secondary">
+              <Plane size={20} strokeWidth={1.5} aria-hidden="true" />
             </span>
             <span>
               <span className="block text-sm font-semibold tracking-[0.12em]">ROYAL JACKSON</span>
-              <span className="mt-1 block text-[9px] tracking-[0.23em] text-white/60">TRAVEL &amp; TOURS</span>
+              <span className="mt-1 block text-[9px] tracking-[0.15em] text-white/75">TRAVEL &amp; TOURS</span>
+              <span className="mt-0.5 block text-[8px] tracking-[0.15em] text-white/65">THE ART OF TRAVEL</span>
             </span>
           </Link>
-          <p className="mt-6 max-w-sm text-sm leading-7 text-white/65">
+          <p className="mt-6 max-w-sm text-sm leading-7 text-white/75">
             Thoughtful travel planning, visa assistance and study abroad guidance for the journeys
             that matter to you.
           </p>
@@ -43,7 +44,7 @@ export default function Footer() {
 
         <div>
           <h2 className="section-kicker mb-5 text-[#ddc89f]">Explore</h2>
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-sm text-white/80">
             <li><Link className="hover:text-secondary" href="/about">About us</Link></li>
             <li><Link className="hover:text-secondary" href="/services">Our services</Link></li>
             <li><Link className="hover:text-secondary" href="/destinations">Destinations</Link></li>
@@ -55,7 +56,7 @@ export default function Footer() {
 
         <div>
           <h2 className="section-kicker mb-5 text-[#ddc89f]">Services &amp; places</h2>
-          <ul className="space-y-3 text-sm text-white/70">
+          <ul className="space-y-3 text-sm text-white/80">
             {services.map((service) => (
               <li key={service.id}>
                 <Link className="hover:text-secondary" href={`/services#${service.id}`}>
@@ -76,7 +77,7 @@ export default function Footer() {
 
         <div>
           <h2 className="section-kicker mb-5 text-[#ddc89f]">Get in touch</h2>
-          <ul className="space-y-4 text-sm text-white/70">
+          <ul className="space-y-4 text-sm text-white/80">
             <li className="flex items-start gap-3">
               <MapPin size={17} className="mt-0.5 shrink-0 text-secondary" />
               <span>Abuja, Nigeria</span>
@@ -85,7 +86,6 @@ export default function Footer() {
               <Phone size={17} className="mt-0.5 shrink-0 text-secondary" />
               <div className="space-y-2">
                 <a className="block hover:text-secondary" href="tel:+2347036435989">+234 703 643 5989</a>
-                <a className="block hover:text-secondary" href="tel:07039357146">07039357146</a>
               </div>
             </li>
             <li className="flex items-start gap-3">
@@ -101,7 +101,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Chat on WhatsApp
+                WhatsApp · Chat with us
               </a>
             </li>
           </ul>

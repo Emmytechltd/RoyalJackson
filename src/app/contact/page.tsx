@@ -14,7 +14,7 @@ export default function ContactPage() {
       <PageIntro
         eyebrow="We are here to help"
         title="Let’s talk about where you want to go."
-        description="Have a question about travel, study abroad or visa assistance? Tell us what you are planning and our team will be in touch."
+        description="Have a question about travel, study abroad or visa assistance? Share your plans and choose whether to send your enquiry to our team on WhatsApp."
         image="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=2000&q=85"
       />
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-6 sm:py-20 lg:grid-cols-[.7fr_1.3fr] lg:gap-16 lg:px-8">
@@ -22,7 +22,7 @@ export default function ContactPage() {
           <p className="section-kicker">Get in touch</p>
           <h2 className="editorial mt-3 text-4xl text-primary">A real person is ready to help.</h2>
           <p className="mt-4 text-sm leading-7 text-slate-600">
-            Reach us by phone, email or WhatsApp, or send your travel enquiry using the form.
+            Reach us by phone, email or WhatsApp, or prepare a detailed travel enquiry using the form.
           </p>
 
           <div className="mt-8 space-y-6">
@@ -33,7 +33,6 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-sm font-semibold text-primary">Call us</h3>
                 <a className="mt-1 block text-sm text-slate-600 hover:text-primary" href="tel:+2347036435989">+234 703 643 5989</a>
-                <a className="mt-1 block text-sm text-slate-600 hover:text-primary" href="tel:07039357146">07039357146</a>
               </div>
             </div>
             <div className="flex items-start gap-4">

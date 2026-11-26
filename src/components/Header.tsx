@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, Plane, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Our Services", href: "/services", menu: true },
+  { name: "Services", href: "/services", menu: true },
   { name: "Destinations", href: "/destinations", menu: true },
   { name: "Study Abroad", href: "/opportunities" },
   { name: "Contact", href: "/contact" },
@@ -20,7 +20,8 @@ const serviceLinks = [
   { name: "Study abroad", href: "/services#study-abroad" },
   { name: "Work & relocation", href: "/services#work-relocation" },
   { name: "Flights & hotels", href: "/services#flight-hotel" },
-  { name: "Tours & consultation", href: "/services#tours-consultation" },
+  { name: "Travel consultation", href: "/services#travel-consultation" },
+  { name: "Tour packages", href: "/services#tour-packages" },
 ];
 
 const destinationLinks = [
@@ -59,7 +60,7 @@ export default function Header() {
     >
       <div className="hidden bg-primary text-white md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs tracking-wide lg:px-8">
-          <span>Thoughtful journeys, made personal.</span>
+          <span>The Art of Travel · Thoughtful journeys, made personal.</span>
           <div className="flex items-center gap-6 text-white/85">
             <a className="hover:text-secondary" href="tel:+2347036435989">
               +234 703 643 5989
@@ -76,15 +77,19 @@ export default function Header() {
       </div>
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link href="/" aria-label="Royal Jackson Travel & Tours home" className="group flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center border border-secondary text-lg font-semibold text-primary">
-            RJ
+          <span className="relative flex h-11 w-11 items-center justify-center border border-secondary text-primary">
+            <Plane size={20} strokeWidth={1.5} aria-hidden="true" />
+            <span className="absolute bottom-1 left-1/2 h-px w-5 -translate-x-1/2 bg-secondary" />
           </span>
           <span className="leading-tight">
-            <span className="block text-[15px] font-semibold tracking-[0.12em] text-primary">
+            <span className="block text-[14px] font-semibold tracking-[0.11em] text-primary sm:text-[15px]">
               ROYAL JACKSON
             </span>
-            <span className="mt-1 block text-[9px] font-medium tracking-[0.23em] text-slate-500">
+            <span className="mt-1 block text-[9px] font-medium tracking-[0.18em] text-slate-600">
               TRAVEL &amp; TOURS
+            </span>
+            <span className="hidden text-[8px] font-medium tracking-[0.15em] text-slate-500 sm:block">
+              THE ART OF TRAVEL
             </span>
           </span>
         </Link>
@@ -103,7 +108,7 @@ export default function Header() {
                 {item.name}
                 {item.menu && <ChevronDown size={14} aria-hidden="true" />}
               </Link>
-              {item.name === "Our Services" && (
+              {item.name === "Services" && (
                 <div className="invisible absolute left-0 top-[66px] w-60 translate-y-2 border border-slate-100 bg-white p-2 opacity-0 shadow-xl transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                   {serviceLinks.map((link) => (
                     <Link
@@ -133,9 +138,9 @@ export default function Header() {
             </div>
           ))}
           <Link
-            href="/contact"
+            href="/contact#enquiry"
             onClick={() => setIsOpen(false)}
-            className="focus-ring bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#253c60]"
+            className="focus-ring bg-secondary px-5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-primary transition-colors hover:bg-[#d8bd8b]"
           >
             Plan your trip
           </Link>
@@ -184,14 +189,14 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="bg-[#f8f6f0] px-3 py-2 text-xs text-slate-700"
+                    className="bg-[#f7f5f0] px-3 py-2 text-xs text-slate-700"
                   >
                     {link.name}
                   </Link>
                 ))}
               </div>
               <Link
-                href="/contact"
+                href="/contact#enquiry"
                 onClick={() => setIsOpen(false)}
                 className="mt-2 bg-primary px-5 py-3.5 text-center text-sm font-semibold text-white"
               >
